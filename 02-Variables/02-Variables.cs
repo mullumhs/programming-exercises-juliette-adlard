@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Xml.Linq;
 
 /*
 ===============================================================================
@@ -14,7 +15,9 @@ Main Tasks:
 
 Questions:
 1. What is a variable?
+a saved piece of data
 2. What is a string?
+a piece of text
 
 Extension Tasks:
 1. Try creating two string variables and using them in the same message.
@@ -34,8 +37,17 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            Console.WriteLine("What's your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine("Hi " + name);
+            Console.WriteLine("What is your favourite colour?");
+            string colour = Console.ReadLine();
+            colour = colour.ToLower();
+            if (colour != "piss-yellow")
+                Console.WriteLine("Ew, that's an ugly colour.");
+            else Console.WriteLine("You have great taste!");
+            Console.ReadLine();
             
-
         }
     }
 }
