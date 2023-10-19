@@ -14,7 +14,9 @@ Main Tasks:
 
 Questions:
 1. Why were the words "year", "country", and "population" originally underlined?
+they were variables that did not exist
 2. What is the purpose of the dollar sign ($) before the double quotes in the final message?
+string interpolation - without it the program would print the names of the variables with the brackets instead of their value
 
 Extension Tasks:
 1. Print out another statement using three or more new variables of different data types.
@@ -36,10 +38,13 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
-
-
+            int year = 2023;
+            string country = "Australia";
+            double population = 0.03;
+            
             // Do not edit below this line
-            Console.WriteLine($"As of {year} the population of {country} was {population} billion.");
+            Console.WriteLine($"As of {year} the \"population\" of {country} was {population} billion.");
+            Console.WriteLine($@"As of {year} the ""population"" of {country} was {population} billion.");
             Console.ReadLine();
         }
     }
