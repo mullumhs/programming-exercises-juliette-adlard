@@ -43,7 +43,7 @@ namespace ProgrammingExercisesIST
             Console.WriteLine("What is your favourite colour?");
             string colour = Console.ReadLine();
             colour = colour.ToLower();
-            if (colour != "piss-yellow")
+            if (colour == "orange")
                 Console.WriteLine("Ew, that's an ugly colour.");
             else Console.WriteLine("You have great taste!");
             Console.ReadLine();
@@ -56,8 +56,29 @@ namespace ProgrammingExercisesIST
 ===============================================================================
 FEEDBACK AREA: Paste your AI feedback here before submission:
 ===============================================================================
+Code:
 
+Good job on completing the main tasks. You've created string variables, assigned them values based on user input, and used them in output messages.
 
+In the extension tasks, you've successfully created two string variables and used them in the same message. You've also changed a variable to lowercase before outputting it.
 
+However, be careful with your user messages. The message "Ew, that's an ugly colour." might come across as rude to some users. It's generally a good idea to keep user messages neutral and professional.
+
+Code Commenting:
+
+Your code is well-commented at the top, explaining the project's objective and tasks.
+
+It would be beneficial to add some comments in the code itself, especially for the extension tasks. For example, you could add a comment explaining what the colour.ToLower(); line is doing.
+
+Answers to Questions:
+
+Your answers to the questions are correct but could be more detailed. For example, you could explain that a variable is a named space in the computer's memory where a program can store data and retrieve it later, and a string is a sequence of characters.
+Extension Tasks:
+
+You did a great job completing the extension tasks.
+
+For the second extension task, you could also add a comment or a piece of code showing how to change a variable to uppercase. The string.ToUpper(); method could be used for this.
+
+Keep up the good work!
 ===============================================================================
 */
