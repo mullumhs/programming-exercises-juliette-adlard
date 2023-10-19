@@ -15,7 +15,9 @@ Main Tasks:
 
 Questions:
 1. What does assignment mean? What is the assignment operator?
+assigning a value to a variable
 2. Explain what Console.ReadLine() does.
+takes input
 
 Extension Tasks:
 1. Ask for multiple inputs.
@@ -39,7 +41,14 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
-
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Hello {name}!");
+            Console.WriteLine("How many fingers do you have?");
+            int fingers = Convert.ToInt32(Console.ReadLine());
+            fingers = fingers + 1;
+            Console.WriteLine($"How odd. I have {fingers}.");
+            Console.ReadLine();
         }
     }
 }
