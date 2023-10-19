@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Runtime.Remoting.Services;
+using System.Security.Cryptography.X509Certificates;
 
 /*
 ===============================================================================
@@ -17,7 +19,9 @@ Main Tasks:
 
 Questions:
 1. What is the best data type for a whole number?
+integer
 2. What are some data types you could use for decimal numbers?
+double or float, possibly string
 
 Extension Tasks:
 1. Use Google to find out what other data types are in C#, then have a go at using them.
@@ -44,7 +48,13 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
-
+            int num = 12;
+            double num1 = 12.5;
+            bool state = true;
+            char letter = 'a';
+            Console.WriteLine($"It is {state} that {letter} {num} plus {letter} {num1} equals 24.5.");
+            Console.ReadLine();
+            
         }
     }
 }
