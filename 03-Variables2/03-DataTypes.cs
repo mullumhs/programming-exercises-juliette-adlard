@@ -52,7 +52,7 @@ namespace ProgrammingExercisesIST
             double num1 = 12.5;
             bool state = true;
             char letter = 'a';
-            Console.WriteLine($"It is {state} that {letter} {num} plus {letter} {num1} equals 24.5.");
+            Console.WriteLine($"It is {state} that {letter} {num} plus {letter} {num1} equals {letter} 24.5.");
             Console.ReadLine();
             
         }
