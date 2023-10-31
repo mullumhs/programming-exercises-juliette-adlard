@@ -16,8 +16,11 @@ Main Tasks:
 
 Questions:
 1. What does "Convert.ToDouble" do?
+Converts an eligible variable into a double.
 2. What is a parameter? Give an example of where you have used one.
+A variable inside a method. I used a parameter in line 56.
 3. Why is the 'Console.ReadLine()' a parameter to Convert.ToDouble()?
+Because it is used inside the convertion to a double.
 
 Extension Tasks:
 1. Modify the program to work with the 'double' type.
@@ -65,7 +68,7 @@ namespace ProgrammingExercisesIST
 
             Console.WriteLine($"The quotient of {x} and {y} is {x / y}");
 
-            Console.WriteLine($"The remainder of {x} divided by {y} is {Math.Floor(x / y)} remainder {x%y}");
+            Console.WriteLine($"{x} divided by {y} is {Math.Floor(x / y)} remainder {x%y}");
 
             Console.ReadLine();
         }
