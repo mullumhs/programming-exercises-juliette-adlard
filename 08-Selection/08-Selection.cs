@@ -51,6 +51,10 @@ namespace ProgrammingExercisesIST
             // Variables and Input
             Console.Write("Please enter a mark out of 100: ");
             int mark = Convert.ToInt32(Console.ReadLine());
+            if (mark >= 50)
+                Console.WriteLine("PASS");
+            else Console.WriteLine("FAIL");
+            Console.ReadLine();
 
             // Your code goes below here
 

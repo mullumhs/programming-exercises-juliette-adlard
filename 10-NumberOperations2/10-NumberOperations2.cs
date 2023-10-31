@@ -53,9 +53,24 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code goes below here
+            Console.WriteLine("Please enter a number for X:");
+            double X = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter a number for Y:");
+            double Y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nWould you like to: \nA: add these numbers \nB: calculate the difference between these numbers\n");
+            string choice = Console.ReadLine();
+            choice = choice.ToLower();
 
+            if (choice == "a") 
+                Console.WriteLine($"\nThe answer is: {X + Y}");
+            if (choice == "b")
+                Console.WriteLine($"\nThe answer is: {X - Y}");
+            if (choice != "a")
+                if (choice != "b")
+                    Console.WriteLine("\nYou failed.");
 
             // Wait for any key before exiting
+
             Console.WriteLine();
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
