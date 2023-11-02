@@ -22,6 +22,7 @@ pi*r^2, 1/2*base*height, length*width
 
 Extension Tasks:
 1. Extend the program to calculate the area of other shapes and add them to the menu. E.g. Circle, trapezium.
+done
 
 Example:
 - Below is an example of the program's output:
