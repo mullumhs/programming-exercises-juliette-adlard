@@ -14,6 +14,7 @@ Main Tasks:
 
 Questions:
 1. What is the difference between Console.ReadLine() and Console.ReadKey()?
+readline waits for enter to be pressed, readkey just needs a key
 2. Why is the choice stored as a string instead of an integer?
 
 Extension Tasks:
