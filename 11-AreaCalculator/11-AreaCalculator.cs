@@ -16,7 +16,9 @@ Main Tasks:
 
 Questions:
 1. What is the difference between Console.Write() and Console.WriteLine()?
+Write doesn't start on a new line
 2. How is the area of each shape calculated? What mathematical operations are used?
+pi*r^2, 1/2*base*height, length*width
 
 Extension Tasks:
 1. Extend the program to calculate the area of other shapes and add them to the menu. E.g. Circle, trapezium.
@@ -51,6 +53,52 @@ namespace ProgrammingExercisesIST
         {
             // Your code goes below here
 
+            Console.WriteLine("Choose an option:\n1. Area of circle\n2. Area of rectangle\n3. Area of right-angled triangle\n4. Area of trapezium\n");
+
+            string choice = Console.ReadLine();
+
+            if (choice == "1")
+            {
+                Console.Write("\nEnter radius: ");
+                double radius = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine($"\nThe area of the circle is {Math.PI * Math.Pow(radius, 2)}");
+            }
+
+            if (choice == "2")
+            {
+                Console.Write("\nEnter width: ");
+                double width = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter height: ");
+                double height = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine($"\nThe area of the rectangle is {width * height}");
+            }
+
+            if(choice == "3")
+            {
+                Console.Write("\nEnter base length: ");
+                double baselength = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter perpendicular height: ");
+                double perpheight = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine($"g\nThe area of the triangle is {baselength * perpheight * 0.5}");
+            }
+
+            if (choice == "4")
+            {
+                Console.Write("\nEnter top width: ");
+                double width1 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter bottom width: ");
+                double width2 = Convert.ToDouble(Console.ReadLine());
+                Console.Write("Enter perpendicular height: ");
+                double perpheighttrap = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine($"\nThe area of the trapezium is {((width1 + width2) / 2) * perpheighttrap}");
+            }
+
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
         }
     }
 }
