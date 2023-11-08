@@ -13,8 +13,11 @@ Main Tasks:
 
 Questions:
 1. What is a method?
+A set of instructions with a name that can be easily executed by calling the name.
 2. What does the 'void' keyword mean?
+Void identifies a method that will not return a value
 3. What does it mean to 'call' a method?
+To call a method means to tell the computer to follow the instructions of that method
 
 Extension Tasks:
 1. Try creating extra methods that do whatever you like.
@@ -34,11 +37,42 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Call the methods here
-            
+
+            SayHello();
+            Continue();
+            SaySomething();
+            Continue();
+            Hurt();
+            Exit();
         }
 
         // Write your methods here
+        static void SayHello()
+        {
+            Console.WriteLine("Hello World");
+        }
+        
+        static void SaySomething()
+        {
+            Console.WriteLine("\nSay something cohesive.");
+        }
 
+        static void Hurt()
+        {
+            Console.WriteLine("\nWhy don't you want to talk to me? :c");
+        }
+
+        static void Continue()
+        {
+            Console.WriteLine("\n(Answer me pls)");
+            Console.ReadKey();
+        }
+
+        static void Exit()
+        {
+            Console.WriteLine("\n(ANSWER MEEE");
+            Console.ReadKey();
+        }
     }
 }
 
