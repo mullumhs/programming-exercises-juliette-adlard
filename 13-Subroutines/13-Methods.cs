@@ -70,7 +70,7 @@ namespace ProgrammingExercisesIST
 
         static void Exit()
         {
-            Console.WriteLine("\n(ANSWER MEEE");
+            Console.WriteLine("\n(ANSWER MEEE)");
             Console.ReadKey();
         }
     }
