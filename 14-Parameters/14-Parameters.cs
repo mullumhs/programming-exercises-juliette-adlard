@@ -25,9 +25,12 @@ Example:
 
 Questions:
 1. What is a parameter?
+a piece of information used in the method
 2. When writing a method, what two things do you need to supply to create a parameter for it? 
    E.g. static void MyMethod(firstThing secondThing)
+The type of data it is (string, int, bool etc.) and what you're going to call it, essentially creating a variable
 3. What is the difference between a parameter and an argument?
+the argument is used when the method is called, the parameter is used when the method is made
 
 Extension Tasks:
 1. Update "SayHello" to take two parameters, one for the first name and one for the last name.
@@ -48,10 +51,32 @@ namespace ProgrammingExercisesIST
         {
             // Call the methods here, passing in the required arguments
 
+            Console.WriteLine("Enter your name:");
+            string name = Console.ReadLine();
+            Console.WriteLine("Enter your last name:");
+            string surname = Console.ReadLine();
+            Console.WriteLine("Enter a number:");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter another number:");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            ProductCalc(num1, num2);
+            Exit(name, surname);
         }
 
         // Write your methods including parameters here
 
+        static void ProductCalc(double num1, double num2)
+        {
+            double answer = num1 * num2;
+            Console.WriteLine($"The product of your numbers is {answer}.");
+        }
+
+        static void Exit(string name, string surname)
+        {
+            Console.WriteLine($"{name} {surname}, you must now press a key to exit.");
+            Console.ReadKey();
+        }
     }
 }
 
