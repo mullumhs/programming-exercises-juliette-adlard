@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,11 +15,16 @@ namespace _36_Testing
         {
             // Write your code here
 
-
+            Console.WriteLine(Fibonnaci(2));
 
 
             // Wait for input before ending
             Console.ReadLine();
+        }
+
+        static int Fibonnaci(int n)
+        {
+            return (n - 1) + (n - 2);
         }
     }
 }

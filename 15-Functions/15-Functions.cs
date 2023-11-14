@@ -42,9 +42,13 @@ Example:
 
 Questions:
 1. What is a function?
+A method with output.
 2. What does a function do that a method does not?
+Output
 3. What does it mean to "return" a value?
+To send it back to where the function was called.
 4. What is a return type?
+The type of data returned by a function.
 
 Extension Tasks:
 1. Convert one of the methods from your "AreaCalculator" program into a function.
@@ -68,8 +72,9 @@ namespace ProgrammingExercisesIST
             int y = GetNumber();
 
             // Write your code here
-
-            
+            int MultiplicationResult = MultiplyNumbers(x, y);
+            Console.WriteLine($"The product of {x} and {y} is {MultiplicationResult}");
+            Console.WriteLine($"5 multiplied by 8 is {MultiplyNumbers(5, 8)}");
 
             // "Exit" method is called here
             Exit();
@@ -77,7 +82,15 @@ namespace ProgrammingExercisesIST
 
         // Create your functions here
 
+        static int MultiplyNumbers(int x, int y)
+        {
+            return x * y;
+        }
 
+        static string GetName(string name, string surname)
+        {
+            Console.Write("Enter your first name: ")
+        }
 
         // This is a function I have written to get a number from the user
         private static int GetNumber()
