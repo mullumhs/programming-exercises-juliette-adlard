@@ -50,15 +50,37 @@ namespace ProgrammingExercisesIST
             string choice = MainMenu();
 
             // Write your code here
-
-
+            if (choice == "1")
+            {
+                double km = GetDistance("km");
+                Console.WriteLine($"{km} kilometres is equal to {ConvertKMtoMiles(km)} miles");
+            }
+            else if (choice == "2")
+            {
+                double miles = GetDistance("miles");
+                Console.WriteLine($"{miles} miles is equal to {ConvertMilestoKM(miles)} kilmetres");
+            }
+            else
+            {
+                ErrorMessage("Invalid choice!");
+            }
             // Wait for key press before exiting
             WaitForKeyPress();
         }
 
         // Create your functions here
 
+        static double ConvertKMtoMiles(double km)
+        {
+            double miles = km / 1.6;
+            return miles;
+        }
 
+        static double ConvertMilestoKM(double miles)
+        {
+            double km = miles * 1.6;
+            return km;
+        }
 
         // Asks the user to enter a distance in the unit specified
         private static double GetDistance(string unit)
