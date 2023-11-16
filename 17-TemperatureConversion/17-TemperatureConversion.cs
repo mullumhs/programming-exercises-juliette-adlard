@@ -73,6 +73,57 @@ namespace ProgrammingExercisesIST
         {
             // Write your code here
 
+            string choice = ChooseConversion();
+
+            if (choice == "1")
+            {
+                string unit = "celcius";
+                double temp = GetTemp(unit);
+                CelciusToFahrenheit(temp);
+            }
+            else if (choice == "2")
+            {
+                string unit = "fahrenheit";
+                double temp = GetTemp(unit);
+                FahrenheitToCelcius(temp);
+            }
+            else
+            {
+                Console.WriteLine("INVALID RESPONSE");
+            }
+
+            Exit();
+
+        }
+
+        static string ChooseConversion()
+        {
+            Console.WriteLine("What would you like to do?\n1. Celsius to Fahrenheit\n2. Fahrenheit to Celsius");
+            string choice = Console.ReadLine();
+            return choice;
+        }
+
+        static double GetTemp(string unit)
+        {
+            Console.Write($"Enter temperature in {unit}:");
+            double temp = Convert.ToInt32(Console.ReadLine());
+            return temp;
+        }
+
+        static void CelciusToFahrenheit(double temp)
+        {
+            Console.WriteLine($"That is {temp * 9/5 + 32} fahrenheit");
+        }
+
+        static void FahrenheitToCelcius(double temp)
+        {
+            Console.WriteLine($"That is {(temp - 32) * 5/9} celcius");
+        }
+
+        static void Exit()
+        {
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
         }
     }
 }
