@@ -28,6 +28,25 @@ namespace ProgrammingExercisesIST
         {
             // Your code here
 
+            string choice = RunMenuOptions();
+            while (choice != "4")
+            {
+
+                if (choice == "1")
+                {
+                    CalculateCircle();
+                }
+                else if (choice == "2")
+                {
+                    CalculateRectangle();
+                }
+                else if (choice == "3")
+                {
+                    CalculateTriangle();
+                }
+                choice = RunMenuOptions();
+            }
+            Exit();
         }
 
         // Functions for menu and calculations
@@ -49,6 +68,8 @@ namespace ProgrammingExercisesIST
             Console.Write("Radius: ");
             float radius = float.Parse(Console.ReadLine());
             Console.WriteLine("Area: " + (Math.PI * radius * radius));
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
 
         private static void CalculateTriangle()
@@ -59,6 +80,8 @@ namespace ProgrammingExercisesIST
             Console.Write("Height: ");
             float height = float.Parse(Console.ReadLine());
             Console.WriteLine("Area: " + (0.5 * width * height));
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
 
         private static void CalculateRectangle()
@@ -69,6 +92,8 @@ namespace ProgrammingExercisesIST
             Console.Write("Length: ");
             float length = float.Parse(Console.ReadLine());
             Console.WriteLine("Area: " + (width * length));
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }
 
         private static void ErrorMessage()
@@ -77,6 +102,13 @@ namespace ProgrammingExercisesIST
             Console.WriteLine("Invalid Choice! Press any key to continue...");
             Console.ReadKey();
         }
+
+        private static void Exit()
+        {
+            Console.WriteLine("Press any key to exit.");
+            Console.ReadKey();
+        }
+
     }
 }
 

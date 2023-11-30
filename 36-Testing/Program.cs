@@ -15,16 +15,19 @@ namespace _36_Testing
         {
             // Write your code here
 
-            Console.WriteLine(Fibonnaci(2));
-
+            int x = 0;
+            int y = 1;
+            for (int i = 1; i < 1000; i = x + y)
+            {
+                Console.WriteLine(i);
+                y = x;
+                x = i;
+            }
 
             // Wait for input before ending
             Console.ReadLine();
         }
 
-        static int Fibonnaci(int n)
-        {
-            return (n - 1) + (n - 2);
-        }
+        
     }
 }

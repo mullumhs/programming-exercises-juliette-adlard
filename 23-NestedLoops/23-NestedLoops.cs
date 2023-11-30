@@ -42,7 +42,18 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Your code here
+            Console.WriteLine("What size multiplication table would you like: ");
+            int n = Convert.ToInt32(Console.ReadLine());
 
+            for (int y = 1; y <= n; y = y + 1)
+            {
+                Console.WriteLine();
+                for (int x = 1; x <= n; x++)
+                {
+                    Console.Write($"{x} ");
+                }
+            }
+            
 
             // Wait at end
             WaitForKeyPress();

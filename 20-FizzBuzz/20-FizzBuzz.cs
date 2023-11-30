@@ -26,6 +26,7 @@ Main Tasks:
 
 Questions:
 1. Why is the order of the conditions in the if statements important?
+Because it defines what takes priority.
 
 Extension Tasks:
 1. Try modifying the range of numbers the loop iterates over.

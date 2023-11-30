@@ -22,8 +22,8 @@ Main Tasks:
 2. Implement a while loop that requires the user to enter a correct password before displaying a secret message.
 
 Questions:
-1. What is the shortcut for creating a WHILE loop?
-2. When would you use a WHILE loop?
+1. What is the shortcut for creating a WHILE loop? while tab tab
+2. When would you use a WHILE loop? to repeat a quastion until the answer is correct
 
 Extension Tasks:
 1. Extend the first task by also ensuring that the number is also greater than 1.
@@ -46,7 +46,7 @@ namespace ProgrammingExercisesIST
             // 1. Fix the condition of the WHILE loop so that the program works
             Console.WriteLine("Please enter a number less than 100 to continue...");
             int number = int.Parse(Console.ReadLine());
-            while (????)
+            while (number > 99)
             {
                 Console.WriteLine("Incorrect input, try again...");
                 number = int.Parse(Console.ReadLine());
@@ -56,9 +56,13 @@ namespace ProgrammingExercisesIST
 
             // 2. Write a WHILE loop to ensure the user enters a correct password of your choosing
             // Then, under the loop, output a message of your choice
-
-
-
+            string password = Console.ReadLine();
+            while (password != "sneaky")
+            {
+                Console.WriteLine("Incorrect password, try again:");
+                password = Console.ReadLine();
+            }
+            Console.WriteLine("CORRECT");
             // Wait at end
             WaitAtEnd();
         }
