@@ -40,8 +40,8 @@ Main Tasks:
 2. Create a FOR loop that goes from 100 to 199 by steps of 3. Inside the loop, print a message only if the number is divisible by 2.
 
 Questions:
-1. What is the shortcut for creating a FOR loop?
-2. What does the modulus (%) operator do?
+1. What is the shortcut for creating a FOR loop? for tab tab
+2. What does the modulus (%) operator do? finds the remainder of a division question
 
 Extension Tasks:
 1. Try using multiple 'else if' and 'else' statements to expand the functionality of each loop.
@@ -59,11 +59,35 @@ namespace ProgrammingExercisesIST
         {
             WaitBetween("Loop to find the number 42:");
 
-
+            for (int i = 0; i < 100; i++)
+            {
+                if (i == 42)
+                {
+                    Console.WriteLine("FOUND 42");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
 
             WaitBetween("Loop to find numbers divisible by 2:");
 
-
+            for(int i = 100;i < 200; i = i + 3)
+            {
+                if (i%2 == 0)
+                {
+                    Console.WriteLine($"{i} IS EVEN");
+                }
+                else if (i%5 == 2)
+                {
+                    Console.WriteLine("haah");
+                }
+                else
+                {
+                    Console.WriteLine(i);
+                }
+            }
 
             // Wait at end
             WaitAtEnd();
