@@ -51,7 +51,18 @@ namespace ProgrammingExercisesIST
 
             // Write your code here
 
-
+            for (int i = 0; i <= height; i++)
+            {
+                for (int s = 1; s <= height - i; s++)
+                {
+                    Console.Write(" ");
+                }
+                for (int c = 1; c <= height - (height - i); c++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
 
             // Wait at end
             WaitForKeyPress();

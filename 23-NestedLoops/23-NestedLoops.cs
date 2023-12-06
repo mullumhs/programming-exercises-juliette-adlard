@@ -50,7 +50,7 @@ namespace ProgrammingExercisesIST
                 Console.WriteLine();
                 for (int x = 1; x <= n; x++)
                 {
-                    Console.Write($"{x} ");
+                    Console.Write(String.Format("{0, -5}", $"{x * y} "));
                 }
             }
             
