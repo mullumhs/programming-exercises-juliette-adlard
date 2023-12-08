@@ -43,7 +43,21 @@ namespace ProgrammingExercisesIST
 
             // Write your code here
 
+            while (guess != randomNumber)
+            {
+                Console.WriteLine("Guess the number (between 1 and 100): ");
+                guess = Convert.ToInt32(Console.ReadLine());
+                if (guess > randomNumber)
+                {
+                    Console.WriteLine("Too high! Try again.");
+                }
+                if (guess < randomNumber)
+                {
+                    Console.WriteLine("Too low! Try again.");
+                }
+            }
 
+            Console.WriteLine("Correct! Well done.");
 
             // Wait at end
             WaitForKeyPress();

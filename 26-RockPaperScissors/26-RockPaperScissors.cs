@@ -41,14 +41,59 @@ namespace ProgrammingExercisesIST
         static void Main(string[] args)
         {
             // Game loop
+
             while (repeat == true)
             {
                 // 1. Print scores at top of screen
+                Console.WriteLine($"User:{userScore}      Computer: {computerScore}");
+                Console.WriteLine("1: Rock\n2: Paper\n3: Scissors");
                 // 2. User's turn, store what they picked in a string
+                Console.WriteLine("Your Choice: ");
+                int Uchoice = Convert.ToInt32(Console.ReadLine());
                 // 3. Computer's turn, store what they picked in a string
+                Random rnd = new System.Random();
+                int Cchoice = rnd.Next(1, 3);
                 // 4. Determine the winner, store user's result in a string
+                string result = " ";
+                if (Uchoice == 1 && Cchoice == 2)
+                {
+                    result = "loss";
+                }
+                if (Uchoice == 1 && Cchoice == 3)
+                {
+                    result = "win";
+                }
+                if (Uchoice == 2 && Cchoice == 1)
+                {
+                    result = "win";
+                }
+                if (Uchoice == 2 && Cchoice == 3)
+                {
+                    result = "loss";
+                }
+                if (Uchoice == 3 && Cchoice == 1)
+                {
+                    result = "win";
+                }
+                if (Uchoice == 3 && Cchoice == 2)
+                {
+                    result = "loss";
+                }
+                if (Uchoice == Cchoice)
+                {
+                    result = "draw";
+                }
                 // 5. Print out your result and what each player picked
+                Console.WriteLine($"\n\nYour pick: {Uchoice}      Computer choice: {Cchoice}\nResult: {result}");
                 // 6. Update the score
+                if (result == "win")
+                {
+                    userScore = userScore + 1;
+                }
+                if (result == "loss")
+                {
+                    computerScore = computerScore + 1;
+                }
                 // 7. Ask to play again
             }
         }
